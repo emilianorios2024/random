@@ -6,7 +6,7 @@ struct StringBuilder* sb_new(const char* string) {
     if (!string) string = "";
     sb->size = strlen(string);
     sb->capacity = sb->size;
-    char* cpy = malloc(sb->size);
+    char* cpy = malloc(sb->size + 1);
     strcpy(cpy, string);
     sb->content = cpy;
     return sb;
